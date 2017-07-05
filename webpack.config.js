@@ -33,13 +33,17 @@ module.exports = function(env){
                     ]
                 },
                 {
-                    test: /\.(png|jpg|gif)$/,
+                    test: /\.(png|jpg|gif|jpeg)$/,
                     use: [{
                         loader: 'url-loader',
                         options: {
                             limit: 8192
                         }
                     }]
+                },
+                {
+                    test : /\.(woff|woff2|eot|ttf|otf)$/,
+                    use : ['url-loader']
                 },
                 {
                     test: /\.(js|jsx)$/,
