@@ -3,7 +3,7 @@ import './layout.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const box = document.querySelecor('#box');
+const box = document.querySelector('#box');
 
 class Message extends React.Component {
     constructor(props){
@@ -20,7 +20,7 @@ class Message extends React.Component {
 
 
 const aa = {
-    name : 'key1',
+    name : 'ke2y1',
     lily : 'key2'
 };
 

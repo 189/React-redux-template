@@ -6,7 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(env){
     console.log(env);
-
+    
+    env = env || {};
     const config = {
         entry: {
             main: './src/index.js'
@@ -91,6 +92,19 @@ module.exports = function(env){
         // 初始化 SourceMap 时比较慢，但是会在重构建时提供很快的速度，并且生成实际的文件。
         // 行数能够正确映射，因为会映射到原始代码中。
         config.devtool = "eval-source-map";
+        // 启用 HMR
+        config.plugins.push(new webpack.HotModuleReplacementPlugin());
+        config.devServer =  {
+            // 告诉 dev-server 我们在使用 HMR
+            hot: true, 
+            contentBase: path.resolve(__dirname, 'dist'),
+            publicPath: '/',
+            port: 9001,
+            historyApiFallback : true,
+            stats: {
+                colors: true
+            }
+        }
     }
     else {
         config.plugins.push(

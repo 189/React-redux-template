@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --progress --watch --env.development",
-    "deploy": "webpack --progress --watch --env.production"
+    "deploy": "webpack --progress --watch --env.production",
+	"devserver" : "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "kelvinwang@gmail.com",
