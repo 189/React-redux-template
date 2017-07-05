@@ -18,6 +18,14 @@ class Message extends React.Component {
     }
 };
 
+
+const aa = {
+    name : 'key1',
+    lily : 'key2'
+};
+
+console.log(Object.values(aa));
+
 ReactDOM.render(<Message />, box);
 
 
