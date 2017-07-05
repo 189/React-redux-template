@@ -9,10 +9,12 @@ const config = {
     entry: {
         main : './index.js'
     },
+    
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
     },
+
     module: {
         rules: [{
                 test: /\.css$/,
@@ -50,6 +52,13 @@ const config = {
             }
         ]
     },
+
+    resolve : {
+        modules : ['node_modules'],
+        alias : {},
+        extensions : ['.css', '.scss', '.js', '.jsx', '.vue', '*']
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
             filename : './_index.html',
