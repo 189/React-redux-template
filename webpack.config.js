@@ -1,9 +1,14 @@
 const path = require('path');
 const fs = require('fs-extra');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const env = process.env.NODE_ENV;
 
 const config = {
-    entry: './index.js',
+    entry: {
+        main : './index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
@@ -38,15 +43,34 @@ const config = {
             },
             {
                 test : /\.(js|jsx)$/,
+                exclude: /(node_modules|bower_components)/,
                 use : [
-                    { loader : 'babel-loader' }
+                    { loader : 'babel-loader', options : {} }
                 ]
             }
         ]
     },
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin()
+        new HtmlWebpackPlugin({
+            filename : './_index.html',
+            template : './_index.html',
+            inject : true,
+            showErrors : true,
+            chunks : ['main']
+        })
     ]
 };
+
+if(env === 'production'){
+    let plugs = [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin()
+    ];
+    config.plugins.unshift(...plugs);
+}
 
 module.exports = config;
