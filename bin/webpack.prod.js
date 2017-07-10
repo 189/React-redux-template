@@ -2,7 +2,8 @@
 const merge = require('webpack-merge');
 const baseConf = require('./webpack.base');
 const webpack = require('webpack');
-
+const fs = require('fs-extra');
+const path = require('path');
 
 module.exports = merge(baseConf, {
     plugins: [

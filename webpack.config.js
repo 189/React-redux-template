@@ -19,5 +19,6 @@ module.exports = function(env){
     if(typeof config === 'undefined'){
         throw new Error('没有对应' + config + "的配置文件");
     }
-    return require(`./webpack.${config}`);
+    const cf = require(`./bin/webpack.${config}`); 
+    return cf;
 };
