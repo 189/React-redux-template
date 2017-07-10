@@ -24,6 +24,8 @@ module.exports = merge(baseConf, {
                 warnings : false
             },
             comments: false,
+            ie8 : true,
+            
         }),
         function() {
             this.plugin("done", function(stats) {

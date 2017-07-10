@@ -128,19 +128,27 @@
             }
         },
         {
-            "fullBuildTimeout": 200,
-            "requestTimeout": 10000
-        }
+            "definitions": {
+                "process.env": {
+                    "NODE_ENV": "\"production\""
+                }
+            }
+        },
+        {
+            "options": {
+                "beautify": false,
+                "mangle": {
+                    "screw_ie8": true,
+                    "keep_fnames": true
+                },
+                "compress": {
+                    "screw_ie8": true,
+                    "warnings": false
+                },
+                "comments": false
+            }
+        },
+        null
     ],
-    "devtool": "eval-source-map",
-    "devServer": {
-        "hot": true,
-        "contentBase": "/Users/wangshangwen/work/git/quick-demo/dist",
-        "publicPath": "/",
-        "port": 9001,
-        "historyApiFallback": true,
-        "stats": {
-            "colors": true
-        }
-    }
+    "devtool": "source-map"
 }

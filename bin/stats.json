@@ -2,8 +2,8 @@
     "errors": [],
     "warnings": [],
     "version": "3.0.0",
-    "hash": "ec6a6531ee9e95f5e496",
-    "time": 5427,
+    "hash": "4fd806174065df0175c5",
+    "time": 5487,
     "publicPath": "",
     "assetsByChunkName": {
         "vendor": "vendor.js",
@@ -28,7 +28,7 @@
         },
         {
             "name": "main.js",
-            "size": 1846,
+            "size": 1878,
             "chunks": [
                 1
             ],
@@ -9488,7 +9488,7 @@
             "initial": true,
             "entry": false,
             "extraAsync": false,
-            "size": 2934,
+            "size": 2967,
             "names": [
                 "main"
             ],
@@ -9497,7 +9497,7 @@
                 "main.css",
                 "main.css.map"
             ],
-            "hash": "b9766bb815a0b7b9e5d7",
+            "hash": "e0e423589c947c18a081",
             "parents": [
                 0
             ],
@@ -9508,7 +9508,7 @@
                     "name": "./src/index.js",
                     "index": 0,
                     "index2": 171,
-                    "size": 2681,
+                    "size": 2714,
                     "cacheable": true,
                     "built": true,
                     "optional": false,
@@ -9528,7 +9528,7 @@
                     "providedExports": null,
                     "optimizationBailout": [],
                     "depth": 0,
-                    "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nrequire('./layout.css');\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _utils = require('./utils');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar box = document.querySelector('#box');\n\nconsole.log((0, _utils.cube)(3));\n\nvar Message = function (_React$Component) {\n    _inherits(Message, _React$Component);\n\n    function Message(props) {\n        _classCallCheck(this, Message);\n\n        var _this = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));\n\n        _this.name = 'lily';\n        return _this;\n    }\n\n    _createClass(Message, [{\n        key: 'render',\n        value: function render() {\n            return _react2.default.createElement(\n                'h1',\n                null,\n                this.name\n            );\n        }\n    }]);\n\n    return Message;\n}(_react2.default.Component);\n\n;\n\nvar aa = {\n    name: 'ke2y1',\n    lily: 'key2'\n};\n\nconsole.log(Object.values(aa));\n\n_reactDom2.default.render(_react2.default.createElement(Message, null), box);"
+                    "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nrequire('./layout.css');\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _utils = require('./utils');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar box = document.querySelector('#box');\nconsole.log('loaded3');\nalert(1);\nconsole.log((0, _utils.cube)(3));\n\nvar Message = function (_React$Component) {\n    _inherits(Message, _React$Component);\n\n    function Message(props) {\n        _classCallCheck(this, Message);\n\n        var _this = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));\n\n        _this.name = 'lily';\n        return _this;\n    }\n\n    _createClass(Message, [{\n        key: 'render',\n        value: function render() {\n            return _react2.default.createElement(\n                'h1',\n                null,\n                this.name\n            );\n        }\n    }]);\n\n    return Message;\n}(_react2.default.Component);\n\n;\n\nvar aa = {\n    name: 'ke2y1',\n    lily: 'key2'\n};\n\nconsole.log(Object.values(aa));\n\n_reactDom2.default.render(_react2.default.createElement(Message, null), box);"
                 },
                 {
                     "id": 77,
@@ -15478,7 +15478,7 @@
             "name": "./src/index.js",
             "index": 0,
             "index2": 171,
-            "size": 2681,
+            "size": 2714,
             "cacheable": true,
             "built": true,
             "optional": false,
@@ -15498,7 +15498,7 @@
             "providedExports": null,
             "optimizationBailout": [],
             "depth": 0,
-            "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nrequire('./layout.css');\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _utils = require('./utils');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar box = document.querySelector('#box');\n\nconsole.log((0, _utils.cube)(3));\n\nvar Message = function (_React$Component) {\n    _inherits(Message, _React$Component);\n\n    function Message(props) {\n        _classCallCheck(this, Message);\n\n        var _this = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));\n\n        _this.name = 'lily';\n        return _this;\n    }\n\n    _createClass(Message, [{\n        key: 'render',\n        value: function render() {\n            return _react2.default.createElement(\n                'h1',\n                null,\n                this.name\n            );\n        }\n    }]);\n\n    return Message;\n}(_react2.default.Component);\n\n;\n\nvar aa = {\n    name: 'ke2y1',\n    lily: 'key2'\n};\n\nconsole.log(Object.values(aa));\n\n_reactDom2.default.render(_react2.default.createElement(Message, null), box);"
+            "source": "'use strict';\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nrequire('./layout.css');\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _utils = require('./utils');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar box = document.querySelector('#box');\nconsole.log('loaded3');\nalert(1);\nconsole.log((0, _utils.cube)(3));\n\nvar Message = function (_React$Component) {\n    _inherits(Message, _React$Component);\n\n    function Message(props) {\n        _classCallCheck(this, Message);\n\n        var _this = _possibleConstructorReturn(this, (Message.__proto__ || Object.getPrototypeOf(Message)).call(this, props));\n\n        _this.name = 'lily';\n        return _this;\n    }\n\n    _createClass(Message, [{\n        key: 'render',\n        value: function render() {\n            return _react2.default.createElement(\n                'h1',\n                null,\n                this.name\n            );\n        }\n    }]);\n\n    return Message;\n}(_react2.default.Component);\n\n;\n\nvar aa = {\n    name: 'ke2y1',\n    lily: 'key2'\n};\n\nconsole.log(Object.values(aa));\n\n_reactDom2.default.render(_react2.default.createElement(Message, null), box);"
         },
         {
             "id": 77,
