@@ -13,7 +13,7 @@ module.exports = merge(baseConf, {
     devServer :  {
         // 告诉 dev-server 我们在使用 HMR
         hot: true, 
-        contentBase: path.resolve(__dirname, 'dist'),
+        contentBase: path.resolve(process.cwd(), 'dist'),
         publicPath: '/',
         port: 9001,
         historyApiFallback : true,

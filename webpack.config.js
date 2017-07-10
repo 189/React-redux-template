@@ -15,10 +15,19 @@ if(typeof nodeEnv === 'undefined'){
 }
 
 module.exports = function(env){
-    const config = exportsMap[nodeEnv]; 
-    if(typeof config === 'undefined'){
-        throw new Error('没有对应' + config + "的配置文件");
+    const name = exportsMap[nodeEnv]; 
+    
+    if(typeof name === 'undefined'){
+        throw new Error('没有对应' + name + "的配置文件");
     }
-    const cf = require(`./bin/webpack.${config}`); 
-    return cf;
+    
+    const conf = require(`./bin/webpack.${name}`);
+
+    fs.writeFile(path.resolve(process.cwd(), 'snapshoot'), JSON.stringify(conf, null, 4), function(err){
+        if(err){
+            throw err;
+        }
+        console.log('Snapshoot make sucess');
+    });
+    return conf;
 };

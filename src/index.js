@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 import { cube  } from './utils';
 
 const box = document.querySelector('#box');
-
+console.log('loaded3');
+alert(1);
 console.log(cube(3));
 
 class Message extends React.Component {

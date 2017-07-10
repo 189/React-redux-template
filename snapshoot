@@ -1,0 +1,146 @@
+{
+    "entry": {
+        "main": "./src/index.js"
+    },
+    "output": {
+        "path": "/Users/wangshangwen/work/git/quick-demo/dist",
+        "filename": "[name].js"
+    },
+    "module": {
+        "rules": [
+            {
+                "test": {},
+                "use": [
+                    {
+                        "loader": "/Users/wangshangwen/work/git/quick-demo/node_modules/._extract-text-webpack-plugin@2.1.2@extract-text-webpack-plugin/loader.js",
+                        "options": {
+                            "omit": 1,
+                            "remove": true
+                        }
+                    },
+                    {
+                        "loader": "style-loader"
+                    },
+                    {
+                        "loader": "css-loader"
+                    },
+                    {
+                        "loader": "sass-loader"
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "use": [
+                    {
+                        "loader": "html-loader",
+                        "options": {
+                            "minimize": false
+                        }
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "use": [
+                    {
+                        "loader": "url-loader",
+                        "options": {
+                            "limit": 8192
+                        }
+                    }
+                ]
+            },
+            {
+                "test": {},
+                "use": [
+                    "url-loader"
+                ]
+            },
+            {
+                "test": {},
+                "exclude": {},
+                "use": [
+                    {
+                        "loader": "babel-loader",
+                        "options": {}
+                    }
+                ]
+            }
+        ]
+    },
+    "resolve": {
+        "modules": [
+            "node_modules"
+        ],
+        "alias": {},
+        "extensions": [
+            ".css",
+            ".scss",
+            ".js",
+            ".jsx",
+            ".vue",
+            "*"
+        ]
+    },
+    "externals": [],
+    "plugins": [
+        {
+            "chunkNames": [
+                "vendor"
+            ],
+            "ident": "/Users/wangshangwen/work/git/quick-demo/node_modules/._webpack@3.0.0@webpack/lib/optimize/CommonsChunkPlugin.js0"
+        },
+        {
+            "chunkNames": [
+                "manifest"
+            ],
+            "ident": "/Users/wangshangwen/work/git/quick-demo/node_modules/._webpack@3.0.0@webpack/lib/optimize/CommonsChunkPlugin.js1"
+        },
+        {
+            "filename": "[name].css",
+            "id": 1,
+            "options": {
+                "allChunks": true,
+                "ignoreOrder": false
+            }
+        },
+        {
+            "options": {
+                "template": "./src/_index.html",
+                "filename": "./_index.html",
+                "hash": false,
+                "inject": true,
+                "compile": true,
+                "favicon": false,
+                "minify": false,
+                "cache": true,
+                "showErrors": true,
+                "chunks": [
+                    "vendor",
+                    "manifest",
+                    "main"
+                ],
+                "excludeChunks": [],
+                "title": "Webpack App",
+                "xhtml": false,
+                "chunksSortMode": "dependency"
+            }
+        },
+        {
+            "fullBuildTimeout": 200,
+            "requestTimeout": 10000
+        }
+    ],
+    "devtool": "eval-source-map",
+    "devServer": {
+        "hot": true,
+        "contentBase": "/Users/wangshangwen/work/git/quick-demo/dist",
+        "publicPath": "/",
+        "port": 9001,
+        "historyApiFallback": true,
+        "stats": {
+            "colors": true
+        }
+    }
+}
