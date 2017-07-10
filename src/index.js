@@ -28,13 +28,20 @@ const aa = {
 };
 
 async function determineDate() {
-    const moment = await import('moment');
+    const moment = await import(/* webpackChunkName: "my-chunk-name" */ 'moment');
     return moment().format('LLLL');
 }
 
 determineDate().then(function(str){
     console.log(str);
 });
+
+// setTimeout(()=>{
+//     require.ensure([], function(require) {
+//         var moment = require('moment');
+//         console.log(moment().format());
+//     }, 'custom-chunk-name');
+// }, 3000);
 
 // console.log(Object.values(aa));
 
