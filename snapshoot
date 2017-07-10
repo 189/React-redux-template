@@ -145,7 +145,8 @@
                     "screw_ie8": true,
                     "warnings": false
                 },
-                "comments": false
+                "comments": false,
+                "ie8": true
             }
         },
         null
