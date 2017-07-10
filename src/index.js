@@ -1,6 +1,7 @@
 // @flow
 
 import './layout.css';
+import "babel-polyfill";
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -17,7 +18,7 @@ class Message extends React.Component {
     }
 
     render() {
-        return ( <h1>{ this.name }</h1> );
+        return (<h1>{this.name}</h1>);
     }
 };
 
@@ -26,8 +27,17 @@ const aa = {
     lily: 'key2'
 };
 
-console.log(Object.values(aa));
+async function determineDate() {
+    const moment = await import('moment');
+    return moment().format('LLLL');
+}
 
-ReactDOM.render( < Message / > , box);
+determineDate().then(function(str){
+    console.log(str);
+});
+
+// console.log(Object.values(aa));
+
+ReactDOM.render(< Message />, box);
 
 
