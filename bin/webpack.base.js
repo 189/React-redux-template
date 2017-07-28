@@ -83,8 +83,8 @@ module.exports = {
             ignoreOrder : false
         }),
         new HtmlWebpackPlugin({
-            filename: './_index.html',
-            template: './src/_index.html',
+            filename: './index.html',
+            template: './src/index.html',
             inject: true,
             showErrors: true,
             chunks: ['vendor', 'manifest', 'main'],
