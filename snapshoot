@@ -107,8 +107,8 @@
         },
         {
             "options": {
-                "template": "./src/_index.html",
-                "filename": "./_index.html",
+                "template": "./src/index.html",
+                "filename": "./index.html",
                 "hash": false,
                 "inject": true,
                 "compile": true,
@@ -126,7 +126,21 @@
                 "xhtml": false,
                 "chunksSortMode": "dependency"
             }
+        },
+        {
+            "fullBuildTimeout": 200,
+            "requestTimeout": 10000
         }
     ],
-    "devtool": "eval-source-map"
+    "devtool": "eval-source-map",
+    "devServer": {
+        "hot": true,
+        "contentBase": "/Users/wangshangwen/work/git/quick-demo/dist",
+        "publicPath": "/",
+        "port": 9001,
+        "historyApiFallback": true,
+        "stats": {
+            "colors": true
+        }
+    }
 }

@@ -4,47 +4,78 @@ import './layout.css';
 import "babel-polyfill";
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import { cube } from './utils';
+import PropTypes from 'prop-types';
+import moment from 'moment';
 
 const box = document.querySelector('#box');
-console.log('loaded3');
-console.log(cube(3));
 
-class Message extends React.Component {
-    constructor(props) {
+class Hello extends React.Component {
+    constructor(props){
         super(props);
-        this.name = 'lily';
+        this.state = {
+            time : moment().format('MMMM Do YYYY, h:mm:ss a')
+        };
     }
 
-    render() {
-        return (<h1>{this.name}</h1>);
+    render(){
+        return (
+            <div>
+                <h1>{ this.props.message }</h1>
+                <span>now time is { this.state.time }</span>
+            </div>
+        );
     }
-};
 
-const aa = {
-    name: 'ke2y1',
-    lily: 'key2'
-};
-
-async function determineDate() {
-    const moment = await import(/* webpackChunkName: "my-chunk-name" */ 'moment');
-    return moment().format('LLLL');
+    componentDidMount(){
+        setInterval(()=>{
+            this.setState({
+                time : moment().format('MMMM Do YYYY, h:mm:ss a')
+            });
+        }, 1000)
+    }
 }
 
-determineDate().then(function(str){
-    console.log(str);
-});
+Hello.propTypes = {
+    message : PropTypes.string.isRequired
+};
 
-// setTimeout(()=>{
-//     require.ensure([], function(require) {
-//         var moment = require('moment');
-//         console.log(moment().format());
-//     }, 'custom-chunk-name');
-// }, 3000);
 
-// console.log(Object.values(aa));
+ReactDOM.render(<Hello message='Hello world' />, box);
 
-ReactDOM.render(< Message />, box);
+// class Message extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.name = 'lily';
+//     }
+
+//     render() {
+//         return (<h1>{this.name}</h1>);
+//     }
+// };
+
+// const aa = {
+//     name: 'ke2y1',
+//     lily: 'key2'
+// };
+
+// async function determineDate() {
+//     const moment = await import(/* webpackChunkName: "my-chunk-name" */ 'moment');
+//     return moment().format('LLLL');
+// }
+
+// determineDate().then(function(str){
+//     console.log(str);
+// });
+
+// // setTimeout(()=>{
+// //     require.ensure([], function(require) {
+// //         var moment = require('moment');
+// //         console.log(moment().format());
+// //     }, 'custom-chunk-name');
+// // }, 3000);
+
+// // console.log(Object.values(aa));
+
+// ReactDOM.render(< Message />, box);
 
 
