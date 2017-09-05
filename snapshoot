@@ -3,7 +3,7 @@
         "main": "./src/index.js"
     },
     "output": {
-        "path": "/Users/wangshangwen/work/git/quick-demo/dist",
+        "path": "/Users/wangshangwen/work/git/reactTest/test/dist",
         "filename": "[name].js"
     },
     "module": {
@@ -12,7 +12,7 @@
                 "test": {},
                 "use": [
                     {
-                        "loader": "/Users/wangshangwen/work/git/quick-demo/node_modules/._extract-text-webpack-plugin@2.1.2@extract-text-webpack-plugin/loader.js",
+                        "loader": "/Users/wangshangwen/work/git/reactTest/test/node_modules/._extract-text-webpack-plugin@2.1.2@extract-text-webpack-plugin/loader.js",
                         "options": {
                             "omit": 1,
                             "remove": true
@@ -89,13 +89,13 @@
             "chunkNames": [
                 "vendor"
             ],
-            "ident": "/Users/wangshangwen/work/git/quick-demo/node_modules/._webpack@3.0.0@webpack/lib/optimize/CommonsChunkPlugin.js0"
+            "ident": "/Users/wangshangwen/work/git/reactTest/test/node_modules/._webpack@3.5.5@webpack/lib/optimize/CommonsChunkPlugin.js0"
         },
         {
             "chunkNames": [
                 "manifest"
             ],
-            "ident": "/Users/wangshangwen/work/git/quick-demo/node_modules/._webpack@3.0.0@webpack/lib/optimize/CommonsChunkPlugin.js1"
+            "ident": "/Users/wangshangwen/work/git/reactTest/test/node_modules/._webpack@3.5.5@webpack/lib/optimize/CommonsChunkPlugin.js1"
         },
         {
             "filename": "[name].css",
@@ -128,6 +128,7 @@
             }
         },
         {
+            "options": {},
             "fullBuildTimeout": 200,
             "requestTimeout": 10000
         }
@@ -135,7 +136,7 @@
     "devtool": "eval-source-map",
     "devServer": {
         "hot": true,
-        "contentBase": "/Users/wangshangwen/work/git/quick-demo/dist",
+        "contentBase": "/Users/wangshangwen/work/git/reactTest/test/dist",
         "publicPath": "/",
         "port": 9001,
         "historyApiFallback": true,
