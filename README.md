@@ -1,2 +1,7 @@
-# quick-demo
-Convenient demo build with webpack@2.x and MV* framework. 
+# React-redux-template
+Template which used by 'grandma-cli' scaffolding project base on react+redux.
+
+```
+$ npm install grandma-cli -g
+$ grandma-cli init react-redux
+```
